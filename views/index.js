@@ -8,6 +8,7 @@ setInterval(() => {
 
     request.get("http://localhost:5060/api/timeline/getDataFromPlc")
     .then(async data => {
+        console.log(data);
         document.getElementById("M1").textContent = data.data.M1;
         document.getElementById("M2").textContent = data.data.M2;
         document.getElementById("M3").textContent = data.data.M3;
